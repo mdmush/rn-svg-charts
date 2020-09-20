@@ -114,7 +114,10 @@ class XAxis extends PureComponent {
                                                 {...valueSvg}
                                                 key={index}
                                                 x={x(value)}
-                                                onPress={() => this.props.onPress}
+                                                onPress={() => {
+                                                    console.log('xaxis')
+                                                    this.props.onPress(formatLabel(value, index))
+                                                }}
                                             >
                                                 {formatLabel(value, index)}
                                             </SVGText>

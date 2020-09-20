@@ -217,7 +217,7 @@ class BarChart extends PureComponent {
                                         d={bar.path}
                                         animate={animate}
                                         animationDuration={animationDuration}
-                                        onPress={() => this.props.onPress}
+                                        onPress={() => this.props.onPress(data[keyIndex].entityKey)}
                                     />
                                 )
                             })}
